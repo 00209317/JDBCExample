@@ -6,9 +6,9 @@ import java.sql.SQLException;
 public class Connection {
 
     private static Connection instance;
-    private static final String password = ""; // Cambiar
-    private static final String user = ""; // Cambiar
-    private static final String database = ""; // Cambiar
+    private static final String password = ""; // TODO: Cambiar
+    private static final String user = ""; // TODO: Cambiar
+    private static final String database = ""; // TODO: Cambiar
 
     private Connection() {
         try {
