@@ -6,12 +6,13 @@ import java.sql.SQLException;
 public class Connection {
 
     private static Connection instance;
-    private static final String password = "root";
-    private static final String user = "root";
+    private static final String password = ""; // Cambiar
+    private static final String user = ""; // Cambiar
+    private static final String database = ""; // Cambiar
 
     private Connection() {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -30,6 +31,6 @@ public class Connection {
     }
 
     public java.sql.Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mariadb://localhost:3306/estudiantes", user, password);
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database, user, password);
     }
 }
