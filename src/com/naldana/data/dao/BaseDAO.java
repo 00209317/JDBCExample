@@ -95,6 +95,7 @@ public abstract class BaseDAO<T> implements DAO<T> {
 
     @Override
     public boolean update(T updateObject) {
+        // TODO: Dejar de tarea para que lo completen
         return false;
     }
 
